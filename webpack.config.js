@@ -38,7 +38,7 @@ module.exports = {
   },
   devServer: {
     host: 'localhost',
-    port: 8080,
+    port: 8081,
     contentBase: './dist'
   },
   plugins: [
