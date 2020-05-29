@@ -1,0 +1,126 @@
+@charset 'utf-8';
+@import 'partials/mixins';
+@import 'partials/variables';
+
+.page-footer {
+  background-color: #535353;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 10%;
+
+  @include ss_414x896 {
+    padding-left: 15%;
+  }
+
+  .footer__logo {
+    align-self: center;
+    margin-bottom: 5rem;
+
+    img {
+      height: 10rem;
+    }
+
+    h3 {
+      font-size: 3rem;
+
+      span {
+        display: block;
+        font-size: 0.7rem;
+      }
+    }
+
+    @include ss_414x896 {
+      align-self: flex-start;
+    }
+  }
+
+  .footer__section--middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    @include ss_414x896 {
+      flex-direction: column;
+    }
+
+    .footer__feature {
+      .footer__feature_title {
+        font-size: 1.4rem;
+        font-family: $font-sans-serif;
+        font-weight: 300;
+        color: #AAAAAA;
+        margin-bottom: 3rem;
+      }
+
+      ul {
+        margin-bottom: 5rem;
+        list-style: none;
+
+        li {
+          font-family: $font-sans-serif;
+          font-weight: 300;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .footer__feature--service {
+      ul {
+        li {
+          margin-bottom: 0.5rem;
+
+          a {
+            font-weight: 300;
+            font-size: 1.4rem;
+            @include normalize-link(white);
+          }
+        }
+      }
+    }
+
+    .footer__feature--contact {
+
+      .footer__contact_text,
+      a {
+        font-size: 1.4rem;
+        font-family: $font-sans-serif;
+        font-weight: 300;
+      }
+
+      .footer__contact_text {
+        a:link {
+          color: rgba(166, 172, 255, 0.5);
+        }
+
+        a:hover,
+        a:visited {
+          color: #a6acff;
+        }
+      }
+    }
+
+    .footer__feature--social-media {
+      ul {
+        li {
+          display: inline-block;
+          margin-right: 1rem;
+
+          a {
+            .social_icon {
+              height: 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer__section--bottom {
+    padding: 3rem;
+    text-align: center;
+    font-family: $font-sans-serif;
+    font-size: 1rem;
+    color: #8B8B8B;
+    border-top: 1px solid #8B8B8B;
+  }
+}
